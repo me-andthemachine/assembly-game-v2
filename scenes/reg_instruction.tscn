@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dskknsay2s67c"]
+
+[ext_resource type="Script" uid="uid://dgrbug4l736d7" path="res://scenes/reg_instruction.gd" id="1_drx20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k01f6"]
+size = Vector2(86, 61)
+
+[node name="reg_instruction" type="Area2D" groups=["reg_instruction"]]
+script = ExtResource("1_drx20")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-52, -4)
+shape = SubResource("RectangleShape2D_k01f6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -31.0
+offset_top = -34.0
+offset_right = 130.0
+offset_bottom = 47.0
+theme_override_font_sizes/normal_font_size = 40
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

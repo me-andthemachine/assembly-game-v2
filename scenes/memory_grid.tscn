@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctd635lg7jp41"]
+
+[ext_resource type="Script" uid="uid://quacnll0qe25" path="res://scenes/memory_value.gd" id="2_wpkd3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xa5jh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xx78q"]
+
+[node name="memory_grid" type="Area2D" groups=["address"]]
+
+[node name="address_number_collision" type="CollisionShape2D" parent="."]
+position = Vector2(-281, 10)
+shape = SubResource("CircleShape2D_xa5jh")
+
+[node name="address_number" type="RichTextLabel" parent="."]
+offset_left = -223.0
+offset_top = -26.0
+offset_right = -144.0
+offset_bottom = 41.0
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+text = "0"
+
+[node name="memory_value_node" type="Area2D" parent="." groups=["mem_value"]]
+position = Vector2(-90, 6)
+
+[node name="memory_value_collision" type="CollisionShape2D" parent="memory_value_node"]
+position = Vector2(270, 4)
+shape = SubResource("CircleShape2D_xx78q")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="memory_value_node"]
+offset_left = -15.0
+offset_top = -26.0
+offset_right = 235.0
+offset_bottom = 54.0
+theme_override_font_sizes/normal_font_size = 40
+
+[node name="memory_value" type="LineEdit" parent="memory_value_node"]
+offset_left = -18.0
+offset_top = -37.0
+offset_right = 239.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 40
+clear_button_enabled = true
+script = ExtResource("2_wpkd3")
+
+[connection signal="text_submitted" from="memory_value_node/memory_value" to="memory_value_node/memory_value" method="_on_text_submitted"]

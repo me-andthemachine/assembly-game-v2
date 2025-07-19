@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cylk53a5xhuxi"]
+
+[ext_resource type="Script" uid="uid://deac02ho1wm1m" path="res://scenes/add_memory_button.gd" id="1_3mdtx"]
+
+[node name="Button" type="Button"]
+offset_left = -451.0
+offset_top = -47.0
+offset_right = -322.0
+offset_bottom = 45.0
+theme_override_font_sizes/font_size = 30
+text = "Add
+Memory"
+script = ExtResource("1_3mdtx")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

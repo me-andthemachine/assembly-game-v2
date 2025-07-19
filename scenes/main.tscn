@@ -1,0 +1,224 @@
+[gd_scene load_steps=13 format=3 uid="uid://d07h60l6meinx"]
+
+[ext_resource type="Texture2D" uid="uid://bdcyxolr2i35t" path="res://assets/cpu-background-art-blank-v4.png" id="1_4vqe7"]
+[ext_resource type="Script" uid="uid://cb5rbb21ymy5k" path="res://scenes/background.gd" id="2_skajx"]
+[ext_resource type="PackedScene" uid="uid://bi433e3yhkrh7" path="res://scenes/program_counter_register.tscn" id="3_xqn41"]
+[ext_resource type="PackedScene" uid="uid://8c6r74d0y4um" path="res://scenes/movement_trigger.tscn" id="4_wcj54"]
+[ext_resource type="PackedScene" uid="uid://dskknsay2s67c" path="res://scenes/reg_instruction.tscn" id="7_6cu7a"]
+[ext_resource type="PackedScene" uid="uid://beeeclefx2k5c" path="res://scenes/decoder.tscn" id="8_l5kse"]
+[ext_resource type="PackedScene" uid="uid://c7hkfnmojye0q" path="res://scenes/reg_alu.tscn" id="9_cjxse"]
+[ext_resource type="PackedScene" uid="uid://cywj5385b2i3f" path="res://scenes/layer_2_movement_trigger.tscn" id="9_vihgw"]
+[ext_resource type="PackedScene" uid="uid://cxm27bf0l4u0c" path="res://scenes/halt_instruction.tscn" id="9_w7hu1"]
+[ext_resource type="PackedScene" uid="uid://cfl2wpvs3h76y" path="res://scenes/layer_3_movement_trigger.tscn" id="10_g3rex"]
+[ext_resource type="PackedScene" uid="uid://cylk53a5xhuxi" path="res://scenes/add_memory_button.tscn" id="10_gkv5d"]
+[ext_resource type="PackedScene" uid="uid://qykf8r7gdxq3" path="res://scenes/reset_button.tscn" id="11_oxb2g"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.611111)
+texture = ExtResource("1_4vqe7")
+centered = false
+script = ExtResource("2_skajx")
+
+[node name="movement_trigger3" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(501.667, 204.546)
+scale = Vector2(1.68, 1)
+
+[node name="movement_trigger" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(743.333, 202.909)
+scale = Vector2(1.68, 1)
+
+[node name="movement_trigger2" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(728.333, 85.0909)
+scale = Vector2(1.68, 1)
+
+[node name="movement_trigger13" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(938.333, 106.364)
+scale = Vector2(1.68, 1)
+
+[node name="layer2_movement_trigger" parent="Background" instance=ExtResource("9_vihgw")]
+position = Vector2(1378.33, 44.1818)
+
+[node name="layer2_movement_trigger2" parent="Background" instance=ExtResource("9_vihgw")]
+position = Vector2(910, 54)
+
+[node name="layer2_movement_trigger3" parent="Background" instance=ExtResource("9_vihgw")]
+position = Vector2(916.667, 117.818)
+
+[node name="layer2_movement_trigger4" parent="Background" instance=ExtResource("9_vihgw")]
+position = Vector2(711.667, 111.273)
+
+[node name="decoder" parent="Background" instance=ExtResource("8_l5kse")]
+position = Vector2(701.667, 474.546)
+collision_layer = 2
+collision_mask = 2
+
+[node name="layer3_movement_trigger" parent="Background" instance=ExtResource("10_g3rex")]
+position = Vector2(701.667, 517.091)
+
+[node name="layer3_movement_trigger2" parent="Background" instance=ExtResource("10_g3rex")]
+position = Vector2(731.667, 327.273)
+
+[node name="layer3_movement_trigger3" parent="Background" instance=ExtResource("10_g3rex")]
+position = Vector2(725, 741.273)
+
+[node name="movement_trigger15" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(741.667, 343.636)
+scale = Vector2(1.68, 1)
+
+[node name="movement_trigger16" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(731.667, 744.546)
+scale = Vector2(1.68, 1)
+
+[node name="movement_trigger6" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(686.667, 641.455)
+scale = Vector2(1.68, 1)
+
+[node name="movement_trigger9" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(11.6667, 202.909)
+scale = Vector2(1.66667, 1.63636)
+
+[node name="movement_trigger12" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(13.3333, 348.546)
+scale = Vector2(1.66667, 1.63636)
+
+[node name="movement_trigger14" parent="Background" instance=ExtResource("4_wcj54")]
+position = Vector2(15, 715.091)
+scale = Vector2(1.66667, 1.63636)
+
+[node name="reg_instruction" parent="Background" instance=ExtResource("7_6cu7a")]
+position = Vector2(363.333, 345.273)
+
+[node name="reg_alu" parent="Background" instance=ExtResource("9_cjxse")]
+position = Vector2(416.667, 720)
+
+[node name="halt_instruction" parent="Background" instance=ExtResource("9_w7hu1")]
+position = Vector2(1171.67, 217.636)
+
+[node name="add_memory_button" parent="Background" instance=ExtResource("10_gkv5d")]
+offset_left = 763.333
+offset_top = 219.273
+offset_right = 892.333
+offset_bottom = 311.273
+
+[node name="program_counter_register" parent="Background" instance=ExtResource("3_xqn41")]
+position = Vector2(313.333, 202.909)
+
+[node name="reset_button" parent="Background" instance=ExtResource("11_oxb2g")]
+offset_left = 28.3333
+offset_top = 21.2727
+offset_right = 143.333
+offset_bottom = 84.2727
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Background"]
+offset_left = 615.0
+offset_top = 381.0
+offset_right = 707.0
+offset_bottom = 421.0
+text = "Decoder"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Background"]
+offset_left = 628.333
+offset_top = 423.818
+offset_right = 820.333
+offset_bottom = 520.818
+text = "Decodes input.
+Instructions go UP to Instruction Register
+Data goes DOWN to ALU"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Background"]
+offset_left = 158.0
+offset_top = 463.0
+offset_right = 433.0
+offset_bottom = 650.0
+text = "ALU
+
+This is the Arithmetic Logic Unit.
+This component contains a set of logic gates and circuits that can carry out arithmetic calculations.
+Calculation results are stored in the internal ALU register."
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Background"]
+offset_left = 925.0
+offset_top = 21.2727
+offset_right = 1105.0
+offset_bottom = 85.2727
+text = "Memory"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Background"]
+offset_left = 933.333
+offset_top = 93.2728
+offset_right = 1113.33
+offset_bottom = 157.273
+theme_override_font_sizes/normal_font_size = 28
+text = "Addresses"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="Background"]
+offset_left = 1133.33
+offset_top = 93.2727
+offset_right = 1313.33
+offset_bottom = 157.273
+theme_override_font_sizes/normal_font_size = 28
+text = "Data Values"
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="Background"]
+offset_left = 288.333
+offset_top = 256.909
+offset_right = 465.333
+offset_bottom = 320.909
+text = "Instruction Register"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="Background"]
+offset_left = 238.333
+offset_top = 124.364
+offset_right = 406.333
+offset_bottom = 188.364
+text = "Program Counter"
+
+[node name="RichTextLabel9" type="RichTextLabel" parent="Background"]
+offset_left = 148.333
+offset_top = 86.7273
+offset_right = 316.333
+offset_bottom = 150.727
+text = "CPU"
+
+[node name="RichTextLabel10" type="RichTextLabel" parent="Background"]
+offset_left = 1433.0
+offset_top = 43.0
+offset_right = 1863.0
+offset_bottom = 1039.0
+text = "The Computer Processing Unit is responsible for running computer programs. This component works with all other components on the logic board and manages the flow of instructions so that the computer can run programs.
+
+The CPU has two internal registers, the Program Counter and the Instruction Register.
+
+The Program Counter is responsible for keeping track of which instruction should be run next. The value inside the PC represents the address of the next instruction to be run. As soon as the fetch signal is sent off to memory, the PC automatically increments to the next number, so it can read programs in order from top to bottom. However, this number can also be changed manually using code instructions, so that programs can jump to an address anywhere in memory if needed.
+
+Once an instruction is fetched and decoded into a binary format that the CPU can work with, it is placed into the Instruction Register, which triggers the CPU to execute the given instruction.
+
+When instruction execution is complete, whichever component was carrying out the instruction sends a special signal back to the CPU, called an interrupt signal, to let the CPU know that this step of the program is finished, and so the CPU is ready to go ahead and fetch the next instruction, to continue running the program.
+
+This cycle then repeats until the CPU receives a HALT instruction, which ends the fetch-decode-execute cycle so that the CPU knows to stop running.
+
+This is how your computer runs a program.
+
+This visualizer shows how all of the components are connected to each other and work together, so that you can watch the data flow through the circuit to run your code."
+
+[node name="RichTextLabel11" type="RichTextLabel" parent="Background"]
+visible = false
+offset_left = 53.0
+offset_top = 817.0
+offset_right = 461.0
+offset_bottom = 1028.0
+text = "The instruction set is the code of all instructions that this computer has been designed to understand. You can use these instructions to write programs that can then be processed by the CPU.
+Your program is stored in memory, with one code instruction per address. The CPU will then loop through these addresses to fetch the code from memory, decode the instruction into a machine-readable operation, and then execute it."
+
+[node name="RichTextLabel12" type="RichTextLabel" parent="Background"]
+visible = false
+offset_left = 500.0
+offset_top = 784.0
+offset_right = 887.0
+offset_bottom = 1021.0
+text = "HALT - Ends the CPU cycle to stop running code.
+LDA x - Load Address x, where x represents an integer value. This will load in an instruction from the given address x. I.e., LDA 4 will load in the data stored at memory address 4.
+STA x - Store Address x. This will store whatever value is currently in the ALU register, into the memory address x. I.e., STA 5 will store the value of the ALU register into memory address 5.
+ADD x - Adds x to whatever value is currently stored in the ALU."

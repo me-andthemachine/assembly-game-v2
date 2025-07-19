@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxm27bf0l4u0c"]
+
+[ext_resource type="Script" uid="uid://g1ls0efthum" path="res://scenes/halt_instruction.gd" id="1_ttpni"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xa5jh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xx78q"]
+
+[node name="halt_instruction" type="Area2D" groups=["address"]]
+
+[node name="address_number_collision" type="CollisionShape2D" parent="."]
+position = Vector2(-250, 16)
+shape = SubResource("CircleShape2D_xa5jh")
+
+[node name="address_number" type="RichTextLabel" parent="."]
+offset_left = -197.0
+offset_top = -28.0
+offset_right = -118.0
+offset_bottom = 39.0
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+text = "0"
+
+[node name="memory_value_node" type="Area2D" parent="." groups=["mem_value"]]
+
+[node name="memory_value_collision" type="CollisionShape2D" parent="memory_value_node"]
+position = Vector2(209, 17)
+shape = SubResource("CircleShape2D_xx78q")
+
+[node name="memory_value" type="RichTextLabel" parent="memory_value_node"]
+offset_left = -14.0
+offset_top = -26.0
+offset_right = 243.0
+offset_bottom = 57.0
+theme_override_font_sizes/normal_font_size = 40
+text = "HALT"
+script = ExtResource("1_ttpni")

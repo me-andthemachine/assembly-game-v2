@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi433e3yhkrh7"]
+
+[ext_resource type="Script" uid="uid://bhog11hyemmx3" path="res://scenes/program_counter_register.gd" id="1_bu78g"]
+[ext_resource type="Script" uid="uid://bb1ho2b72of68" path="res://scenes/moving_value.gd" id="2_6prsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjf3b"]
+size = Vector2(122, 79)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_px60x"]
+radius = 17.0074
+
+[node name="program_counter_register" type="Area2D"]
+script = ExtResource("1_bu78g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_wjf3b")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = -55.0
+offset_top = -39.0
+offset_right = 101.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 40
+placeholder_text = "0"
+
+[node name="program_counter" type="RichTextLabel" parent="."]
+offset_left = -12.0
+offset_top = -30.0
+offset_right = 165.0
+offset_bottom = 45.0
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+
+[node name="run_script_button" type="Button" parent="."]
+offset_left = -218.0
+offset_top = -49.0
+offset_right = -99.0
+offset_bottom = 43.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+text = "Run
+Script"
+
+[node name="moving_value" type="Area2D" parent="."]
+script = ExtResource("2_6prsf")
+
+[node name="moving_value_label" type="RichTextLabel" parent="moving_value"]
+offset_left = -13.0
+offset_top = -30.0
+offset_right = 333.0
+offset_bottom = 45.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moving_value"]
+position = Vector2(1, 1.5)
+shape = SubResource("CircleShape2D_px60x")
+
+[connection signal="area_shape_entered" from="." to="." method="_on_area_shape_entered"]
+[connection signal="area_shape_exited" from="." to="." method="_on_area_shape_exited"]
+[connection signal="text_changed" from="LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="pressed" from="run_script_button" to="." method="_on_run_script_button_pressed"]

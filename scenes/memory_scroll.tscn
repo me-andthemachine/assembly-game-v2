@@ -1,0 +1,227 @@
+[gd_scene load_steps=2 format=3 uid="uid://duewnoaiu7glr"]
+
+[ext_resource type="Script" uid="uid://bdbi2j7mvgjh4" path="res://scenes/memory_scroll.gd" id="1_rhcxh"]
+
+[node name="Memory_scroll" type="VScrollBar"]
+anchors_preset = -1
+anchor_right = 0.25
+anchor_bottom = 0.6
+offset_left = 15.0
+offset_top = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rhcxh")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.111853, 0.0823369, 0.216179, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer7"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer7"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer8"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer8"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.93999, 0.954262, 0.732086, 1)
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer9"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer9"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer10"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer10"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.686275, 1, 1, 1)
+
+[node name="HBoxContainer11" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer11"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer11"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.942029, 0.955694, 0.709686, 1)
+
+[node name="HBoxContainer12" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer12"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer12"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.942029, 0.955694, 0.709686, 1)
+
+[node name="HBoxContainer13" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer/HBoxContainer13"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="VBoxContainer/HBoxContainer13"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.942029, 0.955694, 0.709686, 1)

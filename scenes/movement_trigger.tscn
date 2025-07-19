@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://8c6r74d0y4um"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_438jq"]
+
+[node name="Area2D" type="Area2D" groups=["movement"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_438jq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -8.0
+offset_top = -7.0
+offset_right = 8.0
+offset_bottom = 7.0
+color = Color(1, 0.627451, 1, 1)

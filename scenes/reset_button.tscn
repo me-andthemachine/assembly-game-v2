@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://qykf8r7gdxq3"]
+
+[ext_resource type="Script" uid="uid://dpmvi144dp4rp" path="res://scenes/reset_button.gd" id="1_vi6vk"]
+
+[node name="reset_button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 40
+text = "Reset"
+script = ExtResource("1_vi6vk")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
